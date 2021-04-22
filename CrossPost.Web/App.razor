@@ -1,6 +1,9 @@
 <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <MudThemeProvider />
+        <MudDialogProvider />
+        <MudSnackbarProvider />
     </Found>
     <NotFound>
         <LayoutView Layout="@typeof(MainLayout)">
