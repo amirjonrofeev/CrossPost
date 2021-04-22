@@ -1,17 +1,35 @@
 ﻿@inherits LayoutComponentBase
+<MudLayout>
+    <MudAppBar Color="Color.Info">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Color="Color.Inherit">CrossPost</MudText>
+        <MudAppBarSpacer />
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2" Color="Color.Info">
+        <MudDrawerHeader>
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <MudNavLink Icon="@Icons.Filled.Dashboard" IconColor="Color.Inherit" Href="/dashboard">Dashboard</MudNavLink>
+            <MudNavGroup Icon="@Icons.Filled.Settings" IconColor="Color.Inherit"  Title="Settings" Expanded="true">
+                <MudNavLink Icon="@Icons.Filled.AccountBox" IconColor="Color.Inherit" Href="/users">Users</MudNavLink>
+                <MudNavLink Icon="@Icons.Filled.Security" IconColor="Color.Inherit" Href="/security">Security</MudNavLink>
+            </MudNavGroup>
+            <MudNavLink Icon="@Icons.Filled.Info" IconColor="Color.Inherit" Href="/about">About</MudNavLink>
+            <MudNavLink Icon="@Icons.Filled.ExitToApp" IconColor="Color.Inherit" Href="/exit">Exit</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+    <MudMainContent>
+            <MudContainer Fixed="true">
+                @Body
+            </MudContainer>
+    </MudMainContent>
+</MudLayout>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@code {
+    bool _drawerOpen = true;
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
