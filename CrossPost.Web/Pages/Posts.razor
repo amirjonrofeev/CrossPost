@@ -1,0 +1,35 @@
+﻿@page "/posts"
+@*<MudFab Class="bg-info" Icon="@Icons.Material.Filled.Add" />*@
+
+<MudTable Elevation="1" Dense="true" Items="@Elements" Hover="true" Breakpoint="Breakpoint.None">
+    <ToolBarContent>
+        <MudText Class="d-block" Typo="Typo.h6">Posts</MudText>
+        <MudToolBarSpacer />
+        <MudTextField AdornmentColor="Color.Info" @bind-Value="searchString" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Name</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context</MudTd>
+        <MudTd>
+            <MudButton Variant="Variant.Filled" Link="" Class="bg-info extrabtn" StartIcon="@Icons.Material.Filled.Edit">Edit</MudButton>
+            <MudButton Variant="Variant.Filled" OnClick="x => DeletePostAsync(context)" Class="bg-danger extrabtn" StartIcon="@Icons.Material.Filled.Delete">Delete</MudButton>
+        </MudTd>
+    </RowTemplate>
+</MudTable>
+
+@code {
+    private string searchString;
+    private bool _hidePosition;
+    private List<string> Elements = new List<string>() {
+        "GDG Samarkand Test Post, Well in real case scenarios, text will be way longer. " +
+        "GDG Samarkand Test Post, Well in real case scenarios, text will be way longer. ", "Test2", "Test3", "Test4",
+    };
+
+    private async Task DeletePostAsync(string name)
+    {
+        Elements.Remove(name);
+    }
+}

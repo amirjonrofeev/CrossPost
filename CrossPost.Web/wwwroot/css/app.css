@@ -54,3 +54,23 @@ a, .btn-link {
     width: 250px;
     height: 48px;
 }
+.bg-info {
+    background-color: #61ABBF;
+}
+a.bg-info{
+    text-decoration:none;
+}
+a.bg-dark {
+    text-decoration: none;
+}
+.bg-dark span, .bg-danger span, .bg-info span 
+{
+    color: #fff;
+}
+.icon-info, text-info {
+    color: #61ABBF;
+}
+
+.extrabtn {
+    width: 92px;
+}

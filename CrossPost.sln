@@ -11,13 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F75AD9B3-88B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossPost.Services.API.Telegram", "CrossPost.Telegram.API\CrossPost.Services.API.Telegram.csproj", "{D1DCC363-AB41-40D2-85EA-58D63284D504}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPost.Services.Domain", "CrossPost.Services.Domain\CrossPost.Services.Domain.csproj", "{AF88A7D5-3D95-4DAE-8CC8-D47F22241C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossPost.Services.Domain", "CrossPost.Services.Domain\CrossPost.Services.Domain.csproj", "{AF88A7D5-3D95-4DAE-8CC8-D47F22241C16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{10AC7EE4-739C-4C89-8213-F1E0758C371B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPost.Services.Common", "CrossPost.Services.Common\CrossPost.Services.Common.csproj", "{6D9CD442-6F36-427D-9406-CBEF2498766B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossPost.Services.Common", "CrossPost.Services.Common\CrossPost.Services.Common.csproj", "{6D9CD442-6F36-427D-9406-CBEF2498766B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPost.Services.Data", "CrossPost.Services.Data\CrossPost.Services.Data.csproj", "{DC1260C2-340C-48DB-8B30-0F1FD8EAA7F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossPost.Services.Data", "CrossPost.Services.Data\CrossPost.Services.Data.csproj", "{DC1260C2-340C-48DB-8B30-0F1FD8EAA7F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sts", "sts", "{5838C0A0-C952-45E9-8CC4-8DF7C3F186AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F1346354-4820-4F12-8D92-75D622CECA14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,11 +58,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{0E63462A-355D-438F-BF66-682BFB352DCE} = {5838C0A0-C952-45E9-8CC4-8DF7C3F186AF}
 		{D1DCC363-AB41-40D2-85EA-58D63284D504} = {F75AD9B3-88B1-4CE1-A2BF-02A172AFFFCA}
 		{AF88A7D5-3D95-4DAE-8CC8-D47F22241C16} = {10AC7EE4-739C-4C89-8213-F1E0758C371B}
 		{10AC7EE4-739C-4C89-8213-F1E0758C371B} = {F75AD9B3-88B1-4CE1-A2BF-02A172AFFFCA}
 		{6D9CD442-6F36-427D-9406-CBEF2498766B} = {10AC7EE4-739C-4C89-8213-F1E0758C371B}
 		{DC1260C2-340C-48DB-8B30-0F1FD8EAA7F2} = {10AC7EE4-739C-4C89-8213-F1E0758C371B}
+		{5838C0A0-C952-45E9-8CC4-8DF7C3F186AF} = {F75AD9B3-88B1-4CE1-A2BF-02A172AFFFCA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5876527E-9183-4ECA-A3D2-C0304A19A22E}

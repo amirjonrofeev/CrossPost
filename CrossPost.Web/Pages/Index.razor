@@ -1,55 +1,82 @@
 ﻿@page "/"
 
-<MudGrid Class="mt-5">
+<MudGrid>
     <MudItem xs="12">
-        <MudPaper Elevation="0" Class="d-block justify-center mud-width-full">
-            <MudText Align="Align.Center" Color="Color.Info" Typo="Typo.h2">CrossPost</MudText>
-            <MudText Align="Align.Center" Typo="Typo.h6" Color="Color.Info">Easily, automize your social media posting proccess.</MudText>
-            <MudText Align="Align.Center" Typo="Typo.body1">CrossPost is an open source and free application for automatization your social networks posting process.</MudText>
+        <MudPaper Elevation="0" Class="d-block justify-center">
+            <img class="img-fluid mx-auto d-block justify-center" width="256" src="/images/logo.png" />
         </MudPaper>
-        <MudPaper Elevation="0" Class="d-inline-flex justify-center mud-width-full py-8">
-            <MudButton DisableElevation="true" Class="m-2 extrainfo" ButtonType="ButtonType.Button" Color="Color.Info" Variant="Variant.Filled" Link="/about">About</MudButton>
-            <MudButton DisableElevation="true" Class="m-2 extrainfo" ButtonType="ButtonType.Button" Color="Color.Dark" Variant="Variant.Filled" Link="https://github.com/amirjonrofeev">
+        <MudPaper Elevation="0" Class="d-block justify-center">
+            <MudText Align="Align.Center" Class="text-info" Typo="Typo.h2">CrossPost</MudText>
+            <MudText Align="Align.Center" Class="text-info" Typo="Typo.h6">Easily, automize your social media posting proccess.</MudText>
+            <MudText Align="Align.Center" Typo="Typo.body1">
+                CrossPost is an open source and free application for automatization your social networks posting process.
+            </MudText>
+        </MudPaper>
+        <MudPaper Elevation="0" Class="d-inline-flex justify-center mud-width-full mt-5 mb-5">
+            <MudButton Class="m-2 extrainfo bg-info font-info" ButtonType="ButtonType.Button" Variant="Variant.Filled"  Link="/about">About</MudButton>
+            <MudButton Class="m-2 extrainfo bg-dark" ButtonType="ButtonType.Button" Variant="Variant.Filled" Link="https://github.com/amirjonrofeev">
                 Github
             </MudButton>
         </MudPaper>
     </MudItem>
-    <MudItem xs="6">
+    <MudItem xs="12" md="6" lg="6" xl="6" Class="mt-5 mb-5">
         <MudPaper Class="d-inline justify-center mud-width-full" Elevation="0">
-            <MudText Align="Align.Center" Typo="Typo.h5">Why You Shoud Choose Us?</MudText>
+            <MudPaper Elevation="0" Class="d-flex justify-center mud-width-full mb-3">
+                <MudIcon Class="icon-info" Icon="@Icons.Filled.AccountCircle" Style="width:64px; height:64px;"></MudIcon>
+            </MudPaper>
+            <MudText Align="Align.Center" Typo="Typo.h5">You don't have an account?</MudText>
             <MudText Align="Align.Center">
-                CrossPost has very intuitive and simple UI, so using it won't be hard.Besides, it's completely free. You don't have to pay for anything.
+                You can create a new account by simply clicking <MudLink Href="/register" Class="text-info">here</MudLink>.
+                If you don't like the whole signing proccess, then you can sign in with your google, facebook or instagram accounts.
+            </MudText>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" md="6" lg="6" Class="mt-5 mb-5">
+        <MudPaper Class="d-inline justify-center mud-width-full" Elevation="0">
+            <MudPaper Elevation="0" Class="d-flex justify-center mud-width-full mb-3">
+                <MudIcon Class="icon-info" Icon="@Icons.Filled.Apps" Style="width:64px; height:64px;"></MudIcon>
+            </MudPaper>
+            <MudText Align="Align.Center" Typo="Typo.h5">Why shoud you choose us?</MudText>
+            <MudText Align="Align.Center">
+                CrossPost has very intuitive and simple UI, so using it won't be hard. Besides, it's completely free. You don't have to pay for anything.
                 So you can use it as much as you want, without any charge.
             </MudText>
         </MudPaper>
     </MudItem>
-    <MudItem xs="6">
+    <MudItem xs="12" md="6" lg="6" Class="mt-5 mb-5">
         <MudPaper Class="d-inline justify-center mud-width-full" Elevation="0">
-            <MudText Align="Align.Center" Typo="Typo.h5">Do you want to support us?</MudText>
+            <MudPaper Elevation="0" Class="d-flex justify-center mud-width-full mb-3">
+                <MudIcon Class="icon-info" Icon="@Icons.Filled.NewReleases" Style="width:64px; height:64px;"></MudIcon>
+            </MudPaper>
+            <MudText Align="Align.Center" Typo="Typo.h5">Where can I get information about upcoming updates?</MudText>
             <MudText Align="Align.Center">
-                If you are willing to help us you can go to github and give this project a start. If you want to make some donnation, 
+                If you are willing to help us you can go to github and give this project a star. If you want to make some donnation,
                 you can make it on our patreon page.
             </MudText>
         </MudPaper>
     </MudItem>
-    <MudItem xs="12">
+    <MudItem xs="12" md="6" lg="6" Class="mt-5 mb-5">
+        <MudPaper Class="d-inline justify-center mud-width-full" Elevation="0">
+            <MudPaper Elevation="0" Class="d-flex justify-center mud-width-full mb-3">
+                <MudIcon Class="icon-info" Icon="@Icons.Filled.MonetizationOn" Style="width:64px; height:64px;"></MudIcon>
+            </MudPaper>
+            <MudText Align="Align.Center" Typo="Typo.h5">Do you want to support us?</MudText>
+            <MudText Align="Align.Center">
+                If you are willing to help us you can go to github and give this project a star. If you want to make some donnation,
+                you can make it on our patreon page.
+            </MudText>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" Class="mt-5 mb-5">
         <MudPaper Elevation="0" Class="d-block justify-center mud-width-full">
             <MudText Align="Align.Center" Typo="Typo.h5">Supported Social Networks</MudText>
         </MudPaper>
-        <MudPaper Elevation="0" Class="d-flex justify-center mud-width-full">
-            <MudIconButton Color="Color.Info" Size="Size.Large" Icon="@Icons.Custom.Brands.LinkedIn"></MudIconButton>
-            <MudIconButton Color="Color.Info" Size="Size.Large" Icon="@Icons.Custom.Brands.Telegram"></MudIconButton>
-            <MudIconButton Color="Color.Info" Size="Size.Large" Icon="@Icons.Custom.Brands.Instagram"></MudIconButton>
-            <MudIconButton Color="Color.Info" Size="Size.Large" Icon="@Icons.Custom.Brands.Twitter"></MudIconButton>
-            <MudIconButton Color="Color.Info" Size="Size.Large" Icon="@Icons.Custom.Brands.Facebook"></MudIconButton>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12">
-        <MudPaper Elevation="0">
-            <MudDivider />
-        </MudPaper>
-        <MudPaper Elevation="0" Class="mud-width-full">
-            <MudText Class="mt-5" Align="Align.Left" Typo="Typo.h6">CrossPost</MudText>
+        <MudPaper Elevation="0" Class="d-flex justify-center mud-width-full mt-3">
+            <MudIcon Class="icon-info ml-2 mr-2" Size="Size.Large" Icon="@Icons.Custom.Brands.LinkedIn"></MudIcon>
+            <MudIcon Class="icon-info ml-2 mr-2" Size="Size.Large" Icon="@Icons.Custom.Brands.Telegram"></MudIcon>
+            <MudIcon Class="icon-info ml-2 mr-2" Size="Size.Large" Icon="@Icons.Custom.Brands.Instagram"></MudIcon>
+            <MudIcon Class="icon-info ml-2 mr-2" Size="Size.Large" Icon="@Icons.Custom.Brands.Twitter"></MudIcon>
+            <MudIcon Class="icon-info ml-2 mr-2" Size="Size.Large" Icon="@Icons.Custom.Brands.Facebook"></MudIcon>
         </MudPaper>
     </MudItem>
 </MudGrid>

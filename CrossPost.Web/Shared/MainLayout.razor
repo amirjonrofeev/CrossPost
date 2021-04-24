@@ -1,32 +1,28 @@
 ﻿@inherits LayoutComponentBase
 <MudLayout>
-    <MudAppBar Color="Color.Info">
+    <MudAppBar Elevation="1" Class="bg-info" Dense="true">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudText Color="Color.Inherit">CrossPost</MudText>
         <MudAppBarSpacer />
     </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" Elevation="2" Color="Color.Info">
-        <MudDrawerHeader>
+    <MudDrawer ClipMode="DrawerClipMode.Docked" @bind-Open="_drawerOpen" Elevation="1" Color="Color.Inherit">
+        <MudDrawerHeader Class="bg-info d-block justify-center">
+            <img class="img-fluid mx-auto my-auto" src="/images/logo.png" />
         </MudDrawerHeader>
-        <MudNavMenu>
-            <MudNavLink Icon="@Icons.Filled.Dashboard" IconColor="Color.Inherit" Href="/dashboard">Dashboard</MudNavLink>
-            <MudNavGroup Icon="@Icons.Filled.Settings" IconColor="Color.Inherit"  Title="Settings" Expanded="true">
-                <MudNavLink Icon="@Icons.Filled.AccountBox" IconColor="Color.Inherit" Href="/users">Users</MudNavLink>
-                <MudNavLink Icon="@Icons.Filled.Security" IconColor="Color.Inherit" Href="/security">Security</MudNavLink>
-            </MudNavGroup>
-            <MudNavLink Icon="@Icons.Filled.Info" IconColor="Color.Inherit" Href="/about">About</MudNavLink>
-            <MudNavLink Icon="@Icons.Filled.ExitToApp" IconColor="Color.Inherit" Href="/exit">Exit</MudNavLink>
-        </MudNavMenu>
+        <MudDivider/>
+        <NavMenu />
     </MudDrawer>
     <MudMainContent>
-            <MudContainer Fixed="true">
-                @Body
-            </MudContainer>
+        <MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
+            @Body
+            <MudScrollToTop>
+                <MudFab Class="bg-info" Icon="@Icons.Filled.ArrowUpward" />
+            </MudScrollToTop>
+        </MudContainer>
     </MudMainContent>
 </MudLayout>
-
 @code {
-    bool _drawerOpen = true;
+    bool _drawerOpen = false;
 
     void DrawerToggle()
     {
